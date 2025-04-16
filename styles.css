@@ -42,7 +42,7 @@ blockquote {
 
 .testimonial {
   border-radius: 8px;
-  padding: 24px;
+  padding: 40px;
   box-shadow: 2px 4px 10px 6px rgba(0, 0, 0, 0.114);
   transition: transform 0.2s;
 }
@@ -128,10 +128,37 @@ blockquote {
   color: var(--color-grey-2);
 }
 
-@media (min-width: 1240px) {
+.testimonial__heading {
+  line-height: 1.2;
+}
+
+.testimonial__quote {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 900px) {
   .testimonial__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "clifford clifford walters whittle"
+      "harmon abrams abrams whittle";
+  }
+
+  .testimonial:nth-of-type(1) {
+    grid-area: clifford;
+  }
+  .testimonial:nth-of-type(2) {
+    grid-area: walters;
+  }
+  .testimonial:nth-of-type(3) {
+    grid-area: harmon;
+  }
+  .testimonial:nth-of-type(4) {
+    grid-area: abrams;
+  }
+  .testimonial:nth-of-type(5) {
+    grid-area: whittle;
   }
 }
