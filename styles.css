@@ -57,7 +57,21 @@ blockquote {
 .testimonial:nth-of-type(1) {
   background-color: var(--color-purple-deep);
   color: var(--color-white);
+  position: relative;
 }
+
+.testimonial:nth-of-type(1) .testimonial__heading {
+  z-index: 1;
+  position: relative;
+}
+
+#quotes {
+  position: absolute;
+  right: 20%;
+  top: 10%;
+  display: none;
+}
+
 .testimonial:nth-of-type(2) {
   background-color: var(--color-grey-3);
   color: var(--color-white);
@@ -160,5 +174,9 @@ blockquote {
   }
   .testimonial:nth-of-type(5) {
     grid-area: whittle;
+  }
+
+  #quotes {
+    display: block;
   }
 }
