@@ -23,10 +23,16 @@ body {
   background-color: var(--color-grey-0);
 }
 
+blockquote {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
 /* testimonials */
 
 .testimonial__container {
-  max-width: 1240px;
+  max-width: 1440px;
   width: calc(100% - 40px);
   margin: 4rem auto;
   display: flex;
@@ -37,7 +43,16 @@ body {
 .testimonial {
   border-radius: 8px;
   padding: 24px;
+  box-shadow: 2px 4px 10px 6px rgba(0, 0, 0, 0.114);
+  transition: transform 0.2s;
 }
+
+.testimonial:hover,
+.testimonial:focus {
+  transform: scale(0.98);
+}
+
+/* testimonial cards color container */
 
 .testimonial:nth-of-type(1) {
   background-color: var(--color-purple-deep);
@@ -55,4 +70,68 @@ body {
 .testimonial:nth-of-type(4) {
   background-color: var(--color-blue-dark);
   color: var(--color-grey-1);
+}
+
+/* testimonial author  */
+
+.testimonial__author {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.testimonial__author__img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+
+.testimonial:nth-of-type(1) .testimonial__author__img {
+  border: 2px solid var(--color-purple-mid);
+}
+.testimonial:nth-of-type(2) .testimonial__author__img {
+  border: 2px solid var(--color-grey-3);
+}
+.testimonial:nth-of-type(4) .testimonial__author__img {
+  border: 2px solid var(--color-purple-deep);
+}
+
+.testimonial__author__name,
+.testimonial__author__role {
+  line-height: 0.2;
+}
+
+.testimonial__author__name {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.testimonial__author__role {
+  font-size: 0.7rem;
+}
+
+.testimonial:nth-of-type(1) .testimonial__author__role {
+  color: var(--color-grey-0);
+}
+
+.testimonial:nth-of-type(2) .testimonial__author__role {
+  color: var(--color-grey-1);
+}
+.testimonial:nth-of-type(4) .testimonial__author__role {
+  color: var(--color-white);
+}
+.testimonial:nth-of-type(4) .testimonial__author__name {
+  color: var(--color-white);
+}
+
+.testimonial:nth-of-type(5) .testimonial__author__role {
+  color: var(--color-grey-2);
+}
+
+@media (min-width: 1240px) {
+  .testimonial__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
