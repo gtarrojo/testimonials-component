@@ -118,6 +118,7 @@ blockquote {
 .testimonial__author__name {
   font-size: 0.9rem;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .testimonial__author__role {
